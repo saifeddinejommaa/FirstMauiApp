@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstMauiApp.Views.WeatherDetailsPage"
+             xmlns:converter="clr-namespace:FirstMauiApp.converters"
+             Title="WeatherDetailsPage">
+    <ContentPage.Resources>
+        <converter:TempConverter x:Key="intToBool" />
+    </ContentPage.Resources>
+    <VerticalStackLayout>
+        <ScrollView>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Text="{Binding CurrentRegion.Name}"></Label>
+                <HorizontalStackLayout Grid.Row="1">
+                    <Image ></Image>
+                    <Label></Label>
+                </HorizontalStackLayout>
+                <Label FontSize="50" FontAttributes="Bold" Grid.Row="2"  Text="{Binding WeatherState.Temp}" ></Label>
+            </Grid>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helpers="clr-namespace:FirstMauiApp.helpers"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="FirstMauiApp.MainPage">
+
+   
+
+    <Grid>
+        <Grid.RowDefinitions Height="*"></Grid.RowDefinitions>
+
+        <ListView RowHeight="100" Grid.Row="0" ItemsSource="{Binding Regions}" ItemSelected="ListView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0"
+                                   Margin="0,0,0,10"
+                           Text="{Binding Name}"
+                           FontAttributes="Bold" ></Label>
+                            <Label Grid.Row="1" 
+                                   Margin="0,0,0,10"
+                           Text="{Binding Lat}" ></Label>
+                            
+                            <Label Grid.Row="2"
+                                   Margin="0,0,0,10"
+                            FontAttributes="Italic"
+                            Text="{Binding Lng}" 
+                            VerticalOptions="End" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <Button Command="{Binding AddNewCountryCommand}" Text="{x:Static helpers:MauiFontIcons.Add}" Grid.Row="0"  CornerRadius="40"   BackgroundColor="#4ba862"  HorizontalOptions="End" WidthRequest="60" HeightRequest="60" Margin="0,0,20,22" VerticalOptions="End"/>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstMauiApp.Views.NewRegionPage"
+             Title="NewRegionPage">
+    <VerticalStackLayout Margin="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Margin="0,40,0,0" Grid.Row="0" FontSize="Large"  Text="Veuillez entrer la latitude et la longitude d'une zone pour l'ajouter comme région favorie"/>
+                <Grid Margin="0,30,0,0" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalOptions="Center" Grid.Column="0" Text="Nom"/>
+                    <Entry Text="{Binding Name}" Grid.Column="1" Placeholder="Saisissez le nom"></Entry>
+                </Grid>
+                <Grid  Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalOptions="Center" Grid.Column="0" Text="Latitude"/>
+                    <Entry Text="{Binding Lat}" Grid.Column="1" Placeholder="Saisissez l'altitude"></Entry>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label VerticalOptions="Center"  Grid.Column="0" Text="Longitude"/>
+                    <Entry Text="{Binding Lng}"  Grid.Column="1"  Placeholder="Saisissez la longitude"></Entry>
+                </Grid>
+            </Grid>
+            <Button Command="{Binding SaveNewRegion}" Grid.Row="1" VerticalOptions="End" Text="Sauvegarder"></Button>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
