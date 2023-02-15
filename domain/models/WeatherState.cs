@@ -23,7 +23,7 @@ namespace domain.models
        private int _weatherDetailsId;
      //  private Rain? _rain;
        private double _feels_like;
-     //  private IList<Weather>? _weather;
+       private IList<Weather>? _weather;
        
 
         
@@ -41,8 +41,8 @@ namespace domain.models
         
        
         public long Dt { get => _dt; set => _dt = value; }
-        //  [Ignore]
-        //  public IList<Weather>? Weather { get => _weather; set => _weather = value; }
+          [Ignore]
+          public IList<Weather>? Weather { get => _weather; set => _weather = value; }
       //  [Ignore]
         public double Temp { get => _temp; set => _temp = value; }
        // [Ignore]

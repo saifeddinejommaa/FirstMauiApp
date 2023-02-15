@@ -14,7 +14,7 @@ namespace domain.models
         public string Main { get => _main; set => _main = value; }
         public string Description { get => _description; set => _description = value; }
 
-        private string Icon { get => _icon; set => _icon = value; }
+        public string Icon { get => _icon; set => _icon = value; }
       
     }
 }

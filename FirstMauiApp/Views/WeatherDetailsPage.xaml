@@ -6,6 +6,7 @@
              Title="WeatherDetailsPage">
     <ContentPage.Resources>
         <converter:TempConverter x:Key="intToBool" />
+        <converter:IconConverter x:Key="iconName" />
     </ContentPage.Resources>
     <VerticalStackLayout>
         <ScrollView>
@@ -17,10 +18,10 @@
                 </Grid.RowDefinitions>
                 <Label FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" Grid.Row="0" Text="{Binding CurrentRegion.Name}"></Label>
                 <HorizontalStackLayout Grid.Row="1">
-                    <Image ></Image>
-                    <Label></Label>
+                    <Image  Source="{Binding Weather.Icon,Converter={StaticResource iconName }}"></Image>
+                    <Label Text="{Binding Weather.Description}" VerticalOptions="Center"></Label>
                 </HorizontalStackLayout>
-                <Label FontSize="50" FontAttributes="Bold" Grid.Row="2"  Text="{Binding WeatherState.Temp}" ></Label>
+                <Label FontSize="50" FontAttributes="Bold" Grid.Row="2"  Text="{Binding WeatherState.Temp,StringFormat='{0}°'}" ></Label>
             </Grid>
         </ScrollView>
     </VerticalStackLayout>

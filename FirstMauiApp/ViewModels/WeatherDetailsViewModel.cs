@@ -16,6 +16,9 @@ namespace FirstMauiApp.ViewModels
         [ObservableProperty]
         WeatherState weatherState;
 
+        [ObservableProperty]
+        Weather weather;
+
         private domain.models.WeatherDetails _currentWeather;
         public domain.models.WeatherDetails CurrentWeather
         {
@@ -31,6 +34,7 @@ namespace FirstMauiApp.ViewModels
                     _currentWeather = value;
                     OnPropertyChanged(nameof(CurrentWeather));
                     WeatherState = value.Current;
+                    Weather = value.Current.Weather[0];
                 }
             }
         }
@@ -45,6 +49,10 @@ namespace FirstMauiApp.ViewModels
         {
             CurrentRegion = await _useCase.GetRegionById(Id);
             CurrentWeather= await _useCase.getWeatherDetails(currentRegion.Lat,currentRegion.Lng);
+            if(CurrentWeather != null)
+            {
+
+            }
             
         }
     }
