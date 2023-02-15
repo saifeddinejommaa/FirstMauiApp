@@ -5,9 +5,13 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstMauiApp", "FirstMauiApp\FirstMauiApp.csproj", "{659B6260-A3D0-4183-AF53-A649540B05BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "ApiClient\Data.csproj", "{55BA3A02-D2E9-401B-A6FB-8661F302BC20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "ApiClient\Data.csproj", "{55BA3A02-D2E9-401B-A6FB-8661F302BC20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domain", "domain\domain.csproj", "{A343F73F-9DD4-400B-9AA1-96DF9DC47410}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "domain", "domain\domain.csproj", "{A343F73F-9DD4-400B-9AA1-96DF9DC47410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstMauiApp.UnitTests", "FirstMauiApp.UnitTests\FirstMauiApp.UnitTests.csproj", "{BDA2DBF9-7DBA-458D-9D72-A79557D3FF7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstMauiApp.Domain.UnitTests", "FirstMauiApp.Domain.UnitTests\FirstMauiApp.Domain.UnitTests.csproj", "{7EA0A4B8-286A-4824-9FB3-5DB0E3AA13EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{A343F73F-9DD4-400B-9AA1-96DF9DC47410}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A343F73F-9DD4-400B-9AA1-96DF9DC47410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A343F73F-9DD4-400B-9AA1-96DF9DC47410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDA2DBF9-7DBA-458D-9D72-A79557D3FF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDA2DBF9-7DBA-458D-9D72-A79557D3FF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDA2DBF9-7DBA-458D-9D72-A79557D3FF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDA2DBF9-7DBA-458D-9D72-A79557D3FF7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA0A4B8-286A-4824-9FB3-5DB0E3AA13EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA0A4B8-286A-4824-9FB3-5DB0E3AA13EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA0A4B8-286A-4824-9FB3-5DB0E3AA13EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA0A4B8-286A-4824-9FB3-5DB0E3AA13EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
